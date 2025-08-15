@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "0e5df24b498793e6977104225dd5c58d",
-    "previewModeSigningKey": "1d532e89a56199df3c208b882688bb96bb7cf35270fa685112d2ab547e13690b",
-    "previewModeEncryptionKey": "9c47d9431d6ee27bf0474622bc04087828021cd034af37966f9aba55099e4560"
-  }
-}
+{"version":4,"routes":{"/artikel/welcome-padma":{},"/artikel/hello-world":{}},"dynamicRoutes":{"/artikel/[slug]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"bce9563fae7fe590393a2bc0da35c453","previewModeSigningKey":"22b1bc8de261a4c42f211999a6f1421f0adce4b68c0ecb3edc9d153770f6f0e5","previewModeEncryptionKey":"e28d60ec86c979c9663309b981fe432672f15d3ad165dee65f6c4e15e1fb72a6"}}

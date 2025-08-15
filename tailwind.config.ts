@@ -5,8 +5,11 @@ export default {
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./pages/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"
+    "./contexts/**/*.{ts,tsx}",
+    "./hooks/**/*.{ts,tsx}",
+    "./i18n/**/*.{ts,tsx}",
+    "./integrations/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}"
   ],
   prefix: "",
   theme: {

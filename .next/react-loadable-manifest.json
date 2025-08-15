@@ -1,6 +1,42 @@
 {
-  "..\\node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
-    "id": "..\\node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
+  "app\\ClientHome.tsx -> @/components/Contact": {
+    "id": "app\\ClientHome.tsx -> @/components/Contact",
+    "files": [
+      "static/chunks/_app-pages-browser_components_Contact_tsx.js"
+    ]
+  },
+  "app\\ClientHome.tsx -> @/components/Gallery": {
+    "id": "app\\ClientHome.tsx -> @/components/Gallery",
+    "files": [
+      "static/chunks/_app-pages-browser_components_Gallery_tsx.js"
+    ]
+  },
+  "app\\ClientHome.tsx -> @/components/Hero": {
+    "id": "app\\ClientHome.tsx -> @/components/Hero",
+    "files": [
+      "static/chunks/_app-pages-browser_components_Hero_tsx.js"
+    ]
+  },
+  "app\\ClientHome.tsx -> @/components/Services": {
+    "id": "app\\ClientHome.tsx -> @/components/Services",
+    "files": [
+      "static/chunks/_app-pages-browser_components_Services_tsx.js"
+    ]
+  },
+  "components\\BookingModalLazy.tsx -> @/components/SimpleBookingModal": {
+    "id": "components\\BookingModalLazy.tsx -> @/components/SimpleBookingModal",
+    "files": [
+      "static/chunks/_app-pages-browser_components_SimpleBookingModal_tsx-_1db91.js"
+    ]
+  },
+  "components\\Header.tsx -> @/components/SimpleBookingModal": {
+    "id": "components\\Header.tsx -> @/components/SimpleBookingModal",
+    "files": [
+      "static/chunks/_app-pages-browser_components_SimpleBookingModal_tsx-_1db90.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": "node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
     "files": [
       "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
     ]

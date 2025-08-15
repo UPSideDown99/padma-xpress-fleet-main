@@ -1,11 +1,9 @@
 {
-  "/api/vehicles/route": "app/api/vehicles/route.js",
-  "/api/bookings/route": "app/api/bookings/route.js",
-  "/api/articles/route": "app/api/articles/route.js",
-  "/api/vehicle_categories/route": "app/api/vehicle_categories/route.js",
+  "/api/auth/me/route": "app/api/auth/me/route.js",
   "/page": "app/page.js",
   "/artikel/page": "app/artikel/page.js",
   "/artikel/[slug]/page": "app/artikel/[slug]/page.js",
-  "/armada/page": "app/armada/page.js",
-  "/tentang/page": "app/tentang/page.js"
+  "/tentang/page": "app/tentang/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/auth/page": "app/auth/page.js"
 }

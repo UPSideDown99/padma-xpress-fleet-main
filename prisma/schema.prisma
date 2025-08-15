@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+  // output   = "../generated/prisma"
 }
 
 datasource db {
@@ -26,6 +26,8 @@ model Vehicle {
   vehicleCategoryId Int?
 
   @@map("Vehicle")
+  @@index([status])
+  @@index([category])
 }
 
 model VehicleCategory {
@@ -104,4 +106,6 @@ model Article {
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
+  @@index([status])
+  @@index([published_at])
 }

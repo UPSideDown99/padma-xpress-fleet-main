@@ -15,7 +15,7 @@ export async function createSession(payload: JwtPayload) {
     .sign(SECRET);
 }
 
-export async function getSession() {
+export async function getSession(): Promise<JwtPayload | null> {
   const token = (await cookies()).get(COOKIE)?.value;
   if (!token) return null;
   try {
