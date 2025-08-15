@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Vehicle {
+  id Int @id @default(autoincrement())
+
+  // Prisma field snake_case → map ke kolom lama di DB (camelCase)
+  plate_number      String           @unique @map("plateNumber")
+  brand             String
+  model             String
+  category          String
+  year              Int?
+  status            String           @default("available")
+  description       String?
+  image_url         String?          @map("imageUrl")
+  created_at        DateTime         @default(now()) @map("createdAt")
+  updated_at        DateTime         @updatedAt @map("updatedAt")
+  VehicleCategory   VehicleCategory? @relation(fields: [vehicleCategoryId], references: [id])
+  vehicleCategoryId Int?
+
+  @@map("Vehicle")
+}
+
+model VehicleCategory {
+  id         Int       @id @default(autoincrement())
+  name       String    @unique
+  active     Boolean   @default(true)
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  Vehicle    Vehicle[]
+
+  @@map("VehicleCategory")
+}
+
+model Profile {
+  id            String @id @default(cuid()) // ganti jadi cuid agar tidak bergantung Supabase
+  email         String @unique
+  password_hash String
+
+  full_name    String?
+  phone        String?
+  company_name String?
+  address      String?
+  city         String?
+  role         String  @default("customer")
+
+  articles Article[] @relation("ArticleAuthor")
+  bookings Booking[]
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Booking {
+  id                   Int       @id @default(autoincrement())
+  user_id              String?
+  booking_type         String // "vehicle" | "logistics"
+  vehicle_selection    String?
+  pickup_location      String?
+  destination          String? // <— dipakai di UI kamu
+  pickup_datetime      DateTime?
+  return_datetime      DateTime?
+  service_type         String?
+  sender_name          String?
+  sender_phone         String?
+  sender_address       String?
+  recipient_name       String?
+  recipient_phone      String?
+  recipient_address    String?
+  package_weight       Float?
+  package_description  String?
+  special_instructions String?
+  notes                String?
+  total_price          Float?
+  booking_status       String    @default("pending")
+  payment_status       String    @default("pending")
+
+  profile Profile? @relation(fields: [user_id], references: [id])
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Article {
+  id                 Int       @id @default(autoincrement())
+  slug               String    @unique
+  title              String
+  content            String
+  excerpt            String?
+  featured_image_url String?
+  status             String    @default("draft")
+  category           String?
+  tags               Json?
+  published_at       DateTime?
+  author_id          String?
+  author             Profile?  @relation("ArticleAuthor", fields: [author_id], references: [id])
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
